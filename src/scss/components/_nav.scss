@@ -1,0 +1,18 @@
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: var(--main-offset);
+        }
+    }
+
+    &__link {
+        font: var(--font-middle-book);
+        color: var(--color-white);
+        font-size: 14px;
+    }
+}

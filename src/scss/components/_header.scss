@@ -1,0 +1,36 @@
+.header {
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    &__container {
+        --paddings: 15px;
+        align-items: center;
+        padding: var(--second-offset) var(--paddings);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: calc(100% - var(--paddings) * 2);
+            background-color:rgba(255,255,255,0.5);
+        }
+    }
+
+    &__left {
+        grid-column: 2 span;
+    }
+
+    &__right {
+        grid-column: 10 span;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

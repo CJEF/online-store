@@ -1,0 +1,27 @@
+// @include font-face("Intro", "../fonts/Intro-Book", 300, normal);
+// @include font-face("Intro", "../fonts/Intro-Regular", 400, normal);
+// @include font-face("Intro", "../fonts/Intro-Bold", 700, normal);
+
+@font-face {
+    font-family: 'Intro';
+    src: url('../fonts/Intro-Regular.woff') format('woff');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro';
+    src: url('../fonts/Intro-Book.woff') format('woff');
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro';
+    src: url('../fonts/Intro-Bold.woff') format('woff');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}

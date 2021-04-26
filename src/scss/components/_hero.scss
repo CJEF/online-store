@@ -1,0 +1,45 @@
+.hero {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    padding-top: 82px;
+
+    &__bg-text {
+        font-family: 'Intro';
+        font-weight: 700;
+        font-size: 200px;
+        line-height: 200px;
+        color: rgba(255, 255, 255, 0.12);
+        position: absolute;
+        bottom: 108px;
+        left: 155px;
+        z-index: 0;
+        user-select: none;
+    }
+    &__container {
+        padding: 100px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        margin: 0 0 var(--second-offset);
+        font-family: 'Intro';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 140%;
+        max-width: 50%;
+        z-index: 1;
+    }
+    &__descr {
+        max-width: calc(50% - 100px);
+        margin: 0;
+        z-index: 1;
+    }
+    &__btn {
+        margin-top: var(--main-offset);
+        z-index: 1;
+    }
+}
