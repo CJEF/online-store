@@ -1,0 +1,94 @@
+.catalog {
+    &-filter {
+        &__title {
+            font: var(--font-book-24);
+            margin-bottom: var(--second-offset);
+        }
+        &__inner {
+            padding: var(--second-offset);
+            background-color: var(--color-seashell-peach);
+        }
+        &__cost,
+        &__size,
+        &__gender {
+            margin-bottom: var(--second-offset);
+        }
+    }
+    &__btn-apply {
+        margin-top: var(--second-offset);
+    }
+    &__btn-reset {
+        margin-top: var(--second-offset);
+    }
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.filter-gender {
+    &__labels {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__label {
+
+    }
+}
+
+.filter-size {
+    &__table {
+        font: var(--font-book-16);
+        border-collapse: collapse;
+        td {
+            border: 1px solid var(--color-cameo);
+            width: 80px;
+            height: 57px;
+            text-align: center;
+            cursor: pointer;
+            transition: .2s ease-in;
+            &:hover {
+                background-color: var(--color-cameo);
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+.filter-caption {
+    margin-bottom: 10px;
+    display: inline-block;
+    font: var(--font-book-16);
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &__field {
+        appearance: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--color-cameo);
+        position: relative;
+        &::before {
+            content: url('../img/sprite.svg#checked');
+            position: absolute;
+            @include center-xy;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        &:checked::before {
+            opacity: 1;
+            width: 14.5px;
+            height: 11.5px;
+        }
+    }
+    &__text {
+        font: var(--font-book-16);
+        margin-left: 10px;
+    }
+}

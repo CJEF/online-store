@@ -29,3 +29,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin center-xy {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

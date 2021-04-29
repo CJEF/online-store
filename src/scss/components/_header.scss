@@ -31,6 +31,7 @@
     &__right {
         grid-column: 10 span;
         display: flex;
+        align-items: baseline;
         justify-content: flex-end;
     }
 }

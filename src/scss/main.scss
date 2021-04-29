@@ -1,10 +1,13 @@
 // @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
-
+@import "./mixins/_mini";
 // большие компоненты
 @import "./components/header";
 @import "./components/hero";
+@import "./components/_catalog";
 
 // маленькие компоненты
 @import "./components/nav";
 @import "./components/cart";
 @import "./components/logo";
+@import "./components/_filter";
+@import "./components/_article";

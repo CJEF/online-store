@@ -84,6 +84,17 @@ a {
   }
 }
 
+.btn--blue {
+  background-color: var(--color-river-bed);
+  color: var(--color-white);
+  padding: 22px 77.5px;
+  border-radius: 4px;
+}
+
+.btn--transparent {
+
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
@@ -102,4 +113,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

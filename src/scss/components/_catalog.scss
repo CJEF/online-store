@@ -1,0 +1,25 @@
+.catalog {
+    &__inner {
+        padding: 60px 15px;
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__filter {
+        grid-column: 3 span;
+    }
+    &__items {
+        grid-column: 9 span;
+        margin-top: 67px;
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: var(--grid-gap);
+        }
+    }
+    &-list {
+        &__item {
+            grid-column: 3 span;
+        }
+    }
+}

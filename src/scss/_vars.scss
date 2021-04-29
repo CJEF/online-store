@@ -3,8 +3,11 @@
   --color-black: #000;
   --color-white: #fff;
   --color-purple: #484283;
-  --color-accent: #F14F4F;
+  --color-accent: #f14f4f;
   --color-accent-hover: #cc4949;
+  --color-seashell-peach: #fff4ee;
+  --color-cameo: #dbbba9;
+  --color-river-bed: #444B58;
 
  // отступы
  --grid-gap: 20px;
@@ -13,7 +16,8 @@
 
  // шрифты
  --font-family: 'Intro', sans-serif;
- --font-middle-high: 700 30px / 140% var(--font-family); // жирность размер / высота строки
- --font-middle-book: 300 16px / 140% var(--font-family); // жирность размер / высота строки
- --font-middle-regular: 400 16px / 140% var(--font-family);
+ --font-bold-30: 700 30px / 140% var(--font-family); // жирность размер / высота строки
+ --font-regular-16: 400 16px / 140% var(--font-family);
+ --font-book-24: 300 24px / 24px var(--font-family); // жирность размер / высота строки
+ --font-book-16: 300 16px / 140% var(--font-family); // жирность размер / высота строки
 }
