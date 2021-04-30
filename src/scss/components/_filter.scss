@@ -73,13 +73,15 @@
         height: 24px;
         border: 1px solid var(--color-cameo);
         position: relative;
+        border-radius: 4px;
         &::before {
             content: url('../img/sprite.svg#checked');
             position: absolute;
-            @include center-xy;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -66%);
             opacity: 0;
-            width: 0;
-            height: 0;
+            transition: all .2s linear;
         }
         &:checked::before {
             opacity: 1;

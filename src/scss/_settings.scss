@@ -21,6 +21,7 @@ body {
   margin: 0;
   font-family: "Intro", sans-serif;
   background-color: var(--color-white);
+  color: var(--color-river-bed);
 }
 
 img {
@@ -78,7 +79,7 @@ a {
   color: var(--color-white);
   padding: 22px 47px;
   background-color: var(--color-accent);
-  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  transition: background-color .2s linear, color .2s linear;
   &:hover {
     background-color: var(--color-accent-hover);
   }
@@ -89,10 +90,28 @@ a {
   color: var(--color-white);
   padding: 22px 77.5px;
   border-radius: 4px;
+  transition: .3s ease-in-out;
+  &:hover {
+    background-color: var(--color-river-bed-hover);
+  }
 }
 
 .btn--transparent {
 
+}
+
+.btn--rounded {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-river-bed);
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+  &:hover {
+    background-color: var(--color-river-bed-hover);
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -106,7 +125,8 @@ a {
 }
 
 .text {
-  font: var(--font-middle-book);
+  font: var(--font-book-16);
+  margin: 0;
 }
 
 .grid {

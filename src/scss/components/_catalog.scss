@@ -23,3 +23,13 @@
         }
     }
 }
+
+.catalog-items {
+    &__btn-wrap {
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        margin: 60px auto 0;
+    }
+}

@@ -1,3 +1,42 @@
 .article {
-    
+    &-hover__btn {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.product-article {
+    &__hover-block {
+        opacity: 0;
+        transition: .2s ease-in;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-white-hover);
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &:hover &__hover-block {
+            opacity: 1;
+        }
+    &__title {
+        margin: 10px 0;
+        font: var(--font-book-16);
+    }
+    &__cost {
+        font: var(--font-regular-20);
+    }
+    &__img-wrap {
+        position: relative;
+        border-radius: 4px;
+    }
+    &__btn + &__btn {
+        margin-left: 40px;
+    }
 }

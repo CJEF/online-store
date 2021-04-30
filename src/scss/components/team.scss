@@ -1,0 +1,38 @@
+.team {
+    background-color: var(--color-purple);
+    overflow: hidden;
+    position: relative;
+    &__container {
+        position: relative;
+        z-index: 2;
+        padding: 60px 15px 20px;
+    }
+    &__title {
+        margin-bottom: var(--main-offset);
+        color: var(--color-white);
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap);
+    }
+    &__item {
+        grid-column: 4 span;
+        margin-bottom: var(--main-offset);
+    }
+    &__text {
+        color: var(--color-white);
+    }
+    &-card__title {
+        color: var(--color-white);
+        margin: var(--second-offset) 0;
+    }
+    &__avatars {
+        border-radius: 4px;
+    }
+    &__round--red {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
