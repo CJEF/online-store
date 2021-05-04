@@ -28,7 +28,7 @@
         margin: var(--second-offset) 0;
     }
     &__avatars {
-        border-radius: 4px;
+        border-radius: var(--border-radius);
     }
     &__round--red {
         position: absolute;

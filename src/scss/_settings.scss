@@ -71,7 +71,7 @@ a {
 }
 
 .btn {
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   font: 400 16px / 16px var(--font-family);
 }
 
@@ -89,15 +89,43 @@ a {
   background-color: var(--color-river-bed);
   color: var(--color-white);
   padding: 22px 77.5px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   transition: .3s ease-in-out;
   &:hover {
     background-color: var(--color-river-bed-hover);
   }
 }
 
-.btn--transparent {
+.btn--transparent-border {
+  background-color: transparent;
+  padding: 17px 42px;
+  border: 1px solid currentColor;
+  color: var(--color-river-bed);
+  font: var(--font-regular-16-16);
+  transition: .3s ease-in-out;
+  &:hover {
+    background-color: var(--color-river-bed);
+    color: var(--color-white);
+  }
+}
 
+.btn--transparent {
+  padding: 4px 0;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-purple);
+    transition: .2s linear;
+  }
+  &:hover::before {
+    width: 100%;
+  }
 }
 
 .btn--rounded {
@@ -139,4 +167,62 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+// checkbox
+
+// hide arrow
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  hide arrow */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    &__field {
+        appearance: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--color-cameo);
+        position: relative;
+        border-radius: var(--border-radius);
+        &::before {
+            content: url('../img/sprite.svg#checked');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -66%);
+            opacity: 0;
+            transition: all .2s linear;
+        }
+        &:checked::before {
+            opacity: 1;
+            width: 14.5px;
+            height: 11.5px;
+        }
+    }
+    &__text {
+        font: var(--font-book-16);
+        margin-left: 10px;
+    }
+}
+
+// hidden
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

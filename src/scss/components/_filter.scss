@@ -62,35 +62,3 @@
     font: var(--font-book-16);
 }
 
-.custom-checkbox {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    &__field {
-        appearance: none;
-        cursor: pointer;
-        width: 24px;
-        height: 24px;
-        border: 1px solid var(--color-cameo);
-        position: relative;
-        border-radius: 4px;
-        &::before {
-            content: url('../img/sprite.svg#checked');
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -66%);
-            opacity: 0;
-            transition: all .2s linear;
-        }
-        &:checked::before {
-            opacity: 1;
-            width: 14.5px;
-            height: 11.5px;
-        }
-    }
-    &__text {
-        font: var(--font-book-16);
-        margin-left: 10px;
-    }
-}

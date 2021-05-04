@@ -11,15 +11,31 @@
     max-width: 880px;
     margin: 0 auto;
     border-top: 1px solid var(--color-black2);
-    border-bottom: 1px solid var(--color-black2);
     transition: .3s linear;
-    &__header {
+    height: 80px;
+
+    & + .accordion {
+        border-bottom: 1px solid var(--color-black2);
+        
+
+    }
+    &__header-top {
         display: flex;
         justify-content: space-between;
+        z-index: 2;
+        transition: .3s linear;
+        width: 100%;
+        padding: 25px 0;
+        
+
+    }
+    &__header {
+        display: flex;
+        justify-content: center;
         align-items: center;
-        padding: 27px 0;
         cursor: pointer;
         transition: .3s linear;
+
 
     }
     &__close {
@@ -30,10 +46,11 @@
         }
     }
     &__res {
-        height: 0;
-        transition: .3s linear;
+        transition: 1s linear;
         margin: 0;
-        visibility: hidden;
+        z-index: 0;
+        opacity: 0;
+        height: 0;
     }
     &__title {
 
@@ -41,6 +58,12 @@
 }
 
 .accordion--active .accordion__res {
-    height: 100%;
-    visibility: visible;
+    height: auto;
+    opacity: 1;
 }
+
+.accordion--active {
+    height: auto;
+    min-height: 150px;
+}
+

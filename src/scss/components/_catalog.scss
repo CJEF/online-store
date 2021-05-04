@@ -24,6 +24,39 @@
     }
 }
 
+.catalog-filter {
+    &__inputs {
+        display: flex;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 34px;
+            width: 1px;
+            @include center-xy;
+            background-color: var(--color-gray);
+        }
+    }
+    &__input:first-child {
+        border: 1px solid var(--color-gray);
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &__input:last-child {
+        border: 1px solid var(--color-gray);
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &__input {
+        max-width: 50%;
+        background-color: transparent;
+        padding: 17px 5px;
+        border-radius: var(--border-radius);
+    }
+}
+
 .catalog-items {
     &__btn-wrap {
         display: flex;
