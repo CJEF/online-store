@@ -12,7 +12,9 @@
   --color-river-bed-hover: #31343C;
   --color-white-hover: rgba(255, 255, 255, 0.6);
   --color-gray: #B2B5BB;
+  --color-aqua-haze: #F3F6F6;
   --color-jumbo: #808080;
+  --color-eden: #0E5A4C;
 
  // отступы
  --grid-gap: 20px;
@@ -26,13 +28,17 @@
 
  // шрифты
  --font-family: 'Intro', sans-serif;
+ --font-bold-36: 700 36px / 140% var(--font-family);
  --font-bold-30: 700 30px / 140% var(--font-family); // жирность размер / высота строки
  --font-bold-30-30: 700 30px / 30px var(--font-family); // жирность размер / высота строки
  --font-bold-20: 700 20px / 20px var(--font-family); // жирность размер / высота строки
+ --font-regular-30: 400 30px / 140% var(--font-family);
+ --font-book-18: 300 18px / 140% var(--font-family);
  --font-regular-16: 400 16px / 140% var(--font-family);
  --font-regular-16-16: 400 16px / 16px var(--font-family);
  --font-book-16-16: 300 16px / 16px var(--font-family);
  --font-regular-20: 400 20px / 20px var(--font-family);
  --font-book-24: 300 24px / 24px var(--font-family); // жирность размер / высота строки
  --font-book-16: 300 16px / 140% var(--font-family); // жирность размер / высота строки
+ --font-book-14: 300 14px / 140% var(--font-family); // жирность размер / высота строки
 }

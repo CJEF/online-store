@@ -1,0 +1,74 @@
+.contacts {
+    background-color: var(--color-aqua-haze);
+    &__inner {
+        grid-template-columns: repeat(12, 1fr);
+        padding: var(--big-offset) 15px;
+    }
+    &__title {
+        margin-bottom: var(--big-offset);
+    }
+    &__left {
+        grid-column: 5 span;
+    }
+    &__map {
+        grid-column: 7 span;
+    }
+    &-left__socials {
+        margin-top: var(--main-offset);
+    }
+    &__left-links + &__left-links {
+        margin-top: var(--main-offset);
+    }
+    &-left__socials {
+        display: flex;
+    }
+    &-left__social {
+        min-width: 44px;
+        min-height: 44px;
+        max-width: 44px;
+        max-height: 44px;
+        border-radius: 100%;
+        background-color: var(--color-eden);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 23.5px;
+            height: 23.5px;
+        }
+    }
+    &-left__social + &-left__social {
+        margin-left: var(--second-offset);
+    }
+}
+
+.contact-links {
+    &__department {
+        color: var(--color-gray);
+        font: var(--font-book-14);
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: var(--main-offset);
+        &-sale {
+            margin-bottom: var(--second-offset);
+        }
+    }
+    &__number {
+        color: var(--color-river-bed);
+        font: var(--font-regular-30);
+    }
+    &__address {
+        font: var(--font-book-18);
+        margin-top: var(--small-offset);
+    }
+}
+
+// hover tooltip
+.link-department__question {
+    display: none;
+}
+// yandex map
+// #map {
+//     // width: 100%;
+//     // height: 90%;
+// }

@@ -1,0 +1,12 @@
+.insta {
+    padding: 70px 0 80px;
+    &__inner {
+        gap: var(--big-offset);
+    }
+    &__left {
+        grid-column: 4 span;
+    }
+    &__right {
+        grid-column: 8 span;
+    }
+}

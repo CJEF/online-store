@@ -98,7 +98,7 @@ a {
 
 .btn--transparent-border {
   background-color: transparent;
-  padding: 17px 42px;
+  padding: 16px 42px;
   border: 1px solid currentColor;
   color: var(--color-river-bed);
   font: var(--font-regular-16-16);
@@ -225,4 +225,8 @@ input[type=number] {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.active {
+  display: block !important;
 }

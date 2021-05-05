@@ -1,5 +1,7 @@
 // @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
 @import "./mixins/_mini";
+@import "./vendor/nouislider.min";
+
 // большие компоненты
 @import "./components/header";
 @import "./components/hero";
@@ -8,6 +10,8 @@
 @import "./components/_about";
 @import "./components/_quiz";
 @import "./components/faq";
+@import "./components/contacts";
+@import "./components/insta";
 
 // маленькие компоненты
 @import "./components/nav";
@@ -15,3 +19,5 @@
 @import "./components/logo";
 @import "./components/_filter";
 @import "./components/_article";
+@import "./components/_insta-form";
+@import "./components/_insta-images";
