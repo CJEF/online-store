@@ -36,6 +36,10 @@
             width: 23.5px;
             height: 23.5px;
         }
+        transition: .1s linear;
+        &:hover {
+            opacity: .6;
+        }
     }
     &-left__social + &-left__social {
         margin-left: var(--second-offset);
@@ -64,6 +68,9 @@
 }
 
 // hover tooltip
+.link-department {
+    cursor: pointer;
+}
 .link-department__question {
     display: none;
 }

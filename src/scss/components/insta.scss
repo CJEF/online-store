@@ -7,6 +7,16 @@
         grid-column: 4 span;
     }
     &__right {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         grid-column: 8 span;
+    }
+    &-right__grid {
+        grid-template-rows: 160px 160px;
+        grid-template-columns: 152px 330px 152px;
+    }
+    &-right__logo {
+        margin-bottom: var(--small-offset);
     }
 }
