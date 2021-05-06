@@ -1,0 +1,18 @@
+.insta {
+  padding: 70px 0 80px; }
+  .insta__inner {
+    gap: var(--big-offset); }
+  .insta__left {
+    grid-column: 4 span; }
+  .insta__right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 8 span; }
+  .insta-right__grid {
+    grid-template-rows: 160px 160px;
+    grid-template-columns: 152px 330px 152px; }
+  .insta-right__logo {
+    margin-bottom: var(--small-offset); }
+
+/*# sourceMappingURL=insta.css.map */

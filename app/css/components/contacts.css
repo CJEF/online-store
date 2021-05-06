@@ -1,0 +1,60 @@
+.contacts {
+  background-color: var(--color-aqua-haze); }
+  .contacts__inner {
+    grid-template-columns: repeat(12, 1fr);
+    padding: var(--big-offset) 15px; }
+  .contacts__title {
+    margin-bottom: var(--big-offset); }
+  .contacts__left {
+    grid-column: 5 span; }
+  .contacts__map {
+    grid-column: 7 span; }
+  .contacts-left__socials {
+    margin-top: var(--main-offset); }
+  .contacts__left-links + .contacts__left-links {
+    margin-top: var(--main-offset); }
+  .contacts-left__socials {
+    display: flex; }
+  .contacts-left__social {
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    border-radius: 100%;
+    background-color: var(--color-eden);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .1s linear; }
+    .contacts-left__social svg {
+      width: 23.5px;
+      height: 23.5px; }
+    .contacts-left__social:hover {
+      opacity: .6; }
+  .contacts-left__social + .contacts-left__social {
+    margin-left: var(--second-offset); }
+
+.contact-links__department {
+  color: var(--color-gray);
+  font: var(--font-book-14);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--main-offset); }
+  .contact-links__department-sale {
+    margin-bottom: var(--second-offset); }
+
+.contact-links__number {
+  color: var(--color-river-bed);
+  font: var(--font-regular-30); }
+
+.contact-links__address {
+  font: var(--font-book-18);
+  margin-top: var(--small-offset); }
+
+.link-department {
+  cursor: pointer; }
+
+.link-department__question {
+  display: none; }
+
+/*# sourceMappingURL=contacts.css.map */

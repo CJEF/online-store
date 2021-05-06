@@ -1,0 +1,263 @@
+:root {
+  --color-black: #000;
+  --color-black2: #242424;
+  --color-white: #fff;
+  --color-purple: #484283;
+  --color-accent: #f14f4f;
+  --color-accent-hover: #cc4949;
+  --color-seashell-peach: #fff4ee;
+  --color-cameo: #dbbba9;
+  --color-river-bed: #444B58;
+  --color-river-bed-hover: #31343C;
+  --color-white-hover: rgba(255, 255, 255, 0.6);
+  --color-gray: #B2B5BB;
+  --color-aqua-haze: #F3F6F6;
+  --color-jumbo: #808080;
+  --color-eden: #0E5A4C;
+  --grid-gap: 20px;
+  --main-offset: 40px;
+  --big-offset: 60px;
+  --second-offset: 20px;
+  --small-offset: 10px;
+  --border-radius: 4px;
+  --font-family: 'Intro', sans-serif;
+  --font-bold-36: 700 36px / 140% var(--font-family);
+  --font-bold-30: 700 30px / 140% var(--font-family);
+  --font-bold-30-30: 700 30px / 30px var(--font-family);
+  --font-bold-20: 700 20px / 20px var(--font-family);
+  --font-regular-30: 400 30px / 140% var(--font-family);
+  --font-book-18: 300 18px / 140% var(--font-family);
+  --font-regular-16: 400 16px / 140% var(--font-family);
+  --font-regular-16-16: 400 16px / 16px var(--font-family);
+  --font-book-16-16: 300 16px / 16px var(--font-family);
+  --font-regular-20: 400 20px / 20px var(--font-family);
+  --font-book-24: 300 24px / 24px var(--font-family);
+  --font-book-16: 300 16px / 140% var(--font-family);
+  --font-book-14: 300 14px / 140% var(--font-family); }
+
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1; }
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px; }
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none; }
+
+@font-face {
+  font-family: 'Intro';
+  src: url("../fonts/Intro-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Intro';
+  src: url("../fonts/Intro-Book.woff") format("woff");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Intro';
+  src: url("../fonts/Intro-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+body {
+  margin: 0;
+  font-family: "Intro", sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-river-bed); }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.is-outer {
+  position: relative !important;
+  left: -9999px !important; }
+
+.site-container {
+  overflow: hidden; }
+
+.is-hidden {
+  display: none !important; }
+
+.for-mobile {
+  display: none; }
+  @media (max-width: 768px) {
+    .for-mobile {
+      display: block; } }
+
+.error {
+  border: 2px #ff4019 solid !important; }
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer; }
+
+.btn {
+  border-radius: var(--border-radius);
+  font: 400 16px/16px var(--font-family); }
+
+.btn--primary {
+  color: var(--color-white);
+  padding: 22px 47px;
+  background-color: var(--color-accent);
+  transition: background-color .2s linear, color .2s linear; }
+  .btn--primary:hover {
+    background-color: var(--color-accent-hover); }
+
+.btn--blue {
+  background-color: var(--color-river-bed);
+  color: var(--color-white);
+  padding: 22px 77.5px;
+  border-radius: var(--border-radius);
+  transition: .3s ease-in-out; }
+  .btn--blue:hover {
+    background-color: var(--color-river-bed-hover); }
+
+.btn--transparent-border {
+  background-color: transparent;
+  padding: 16px 42px;
+  border: 1px solid currentColor;
+  color: var(--color-river-bed);
+  font: var(--font-regular-16-16);
+  transition: .3s ease-in-out; }
+  .btn--transparent-border:hover {
+    background-color: var(--color-river-bed);
+    color: var(--color-white); }
+
+.btn--transparent {
+  padding: 4px 0;
+  position: relative; }
+  .btn--transparent::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-purple);
+    transition: .2s linear; }
+  .btn--transparent:hover::before {
+    width: 100%; }
+
+.btn--rounded {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-river-bed);
+  border-radius: 50%;
+  transition: .3s ease-in-out; }
+  .btn--rounded:hover {
+    background-color: var(--color-river-bed-hover); }
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none; }
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.text {
+  font: var(--font-book-16);
+  margin: 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap); }
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox  hide arrow */
+input[type=number] {
+  -moz-appearance: textfield; }
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .custom-checkbox__field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--color-cameo);
+    position: relative;
+    border-radius: var(--border-radius); }
+    .custom-checkbox__field::before {
+      content: url("../img/sprite.svg#checked");
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -66%);
+      opacity: 0;
+      transition: all .2s linear; }
+    .custom-checkbox__field:checked::before {
+      opacity: 1;
+      width: 14.5px;
+      height: 11.5px; }
+  .custom-checkbox__text {
+    font: var(--font-book-16);
+    margin-left: 10px; }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
+
+.active {
+  display: block !important; }
+
+/*# sourceMappingURL=global.css.map */
