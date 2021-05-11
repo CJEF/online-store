@@ -399,10 +399,30 @@ try {
 
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
     _loop();
-  }
+  } // cart
+
 } catch (err) {
   _iterator.e(err);
 } finally {
   _iterator.f();
 }
+
+var cartBtn = document.querySelector('#cart-btn');
+var cartModal = document.querySelector(".cart-modal");
+cartBtn.addEventListener("click", function () {
+  cart.classList.toggle("active");
+}); // const cartModalY = () => {
+//   if (cart.classList.contains("active")) {
+//     return true
+//   }
+//   return false
+// }
+
+document.addEventListener("click", function (e) {
+  var target = e.target;
+
+  if (!target.closest('#cart')) {
+    cart.classList.remove("active");
+  }
+});
 //# sourceMappingURL=main.js.map

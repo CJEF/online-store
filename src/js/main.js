@@ -23,3 +23,27 @@ for (let anchor of anchors) {
     });
   });
 }
+
+// cart
+
+const cartBtn = document.querySelector('#cart-btn');
+const cartModal = document.querySelector(".cart-modal");
+
+cartBtn.addEventListener("click", () => {
+  cart.classList.toggle("active");
+});
+
+// const cartModalY = () => {
+//   if (cart.classList.contains("active")) {
+//     return true
+//   }
+
+//   return false
+// }
+
+document.addEventListener("click", (e) => {
+  let target = e.target;
+  if (!target.closest('#cart')) {
+    cart.classList.remove("active");
+  }
+})

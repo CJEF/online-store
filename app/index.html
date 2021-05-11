@@ -31,14 +31,81 @@
           <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
         </ul>
       </nav>
-      <div class="cart header__cart">
-        <button class="btn-reset cart__btn">
+      <div class="cart header__cart" id="cart">
+        <button class="btn-reset cart__btn" id="cart-btn">
           <span class="cart__text">Корзина</span>
           <svg>
             <use xlink:href="img/sprite.svg#cart"></use>
           </svg>
           <span class="cart__count">1</span>
         </button>
+        <div class="cart__modal cart-modal">
+          <ul class="cart-modal__list list-reset">
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div class="cart-modal__footer cart-footer">
+            <div class="cart-footer__left">
+              <span class="cart-footer__res">Итого:</span>
+              <span class="cart-footer__price">25 789 ₽</span>
+            </div>
+            <button class="cart-footer__btn btn-reset btn btn--primary">Перейти в корзину</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -113,7 +180,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -136,7 +203,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -159,7 +226,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -182,7 +249,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -205,7 +272,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -228,7 +295,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -251,7 +318,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -274,7 +341,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -297,7 +364,7 @@
                 <li class="catalog-list__item">
                     <article class="catalog-items__article product-article">
                         <div class="product-article__img-wrap">
-                            <img src="./img/product.jpg" alt="product" class="product-article__img">
+                            <img src="../img/product.jpg" alt="product" class="product-article__img">
                             <div class="product-article__hover-block article-hover">
                                 <div class="article-hover__btn">
                                     <button class="product-article__btn btn-reset btn btn--rounded">
@@ -366,48 +433,48 @@
 </section>
 
       <section class="team" id="team">
-    <img class="team__round--red" src="./img/team__circle.svg" alt="circle" aria-hidden="true">
+    <img class="team__round--red" src="../img/team__circle.svg" alt="circle" aria-hidden="true">
     <div class="team__container container">
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list list-reset">
             <li class="team__item">
                 <div class="team__card team-card">
-                    <img src="./img/team-1.jpg" alt="team image" class="team__avatars">
+                    <img src="../img/team-1.jpg" alt="team image" class="team__avatars">
                     <h3 class="team-card__title">Максим Золотарев</h3>
                     <p class="team__text text">Администратор</p>
                 </div>
             </li>
             <li class="team__item">
                 <div class="team__card team-card">
-                    <img src="./img/team-2.jpg" alt="team image" class="team__avatars">
+                    <img src="../img/team-2.jpg" alt="team image" class="team__avatars">
                     <h3 class="team-card__title">Максим Золотарев</h3>
                     <p class="team__text text">Администратор</p>
                 </div>
             </li>
             <li class="team__item">
                 <div class="team__card team-card">
-                    <img src="./img/team-3.jpg" alt="team image" class="team__avatars">
+                    <img src="../img/team-3.jpg" alt="team image" class="team__avatars">
                     <h3 class="team-card__title">Максим Золотарев</h3>
                     <p class="team__text text">Администратор</p>
                 </div>
             </li>
             <li class="team__item">
                 <div class="team__card team-card">
-                    <img src="./img/team-4.jpg" alt="team image" class="team__avatars">
+                    <img src="../img/team-4.jpg" alt="team image" class="team__avatars">
                     <h3 class="team-card__title">Максим Золотарев</h3>
                     <p class="team__text text">Администратор</p>
                 </div>
             </li>
             <li class="team__item">
                 <div class="team__card team-card">
-                    <img src="./img/team-5.jpg" alt="team image" class="team__avatars">
+                    <img src="../img/team-5.jpg" alt="team image" class="team__avatars">
                     <h3 class="team-card__title">Максим Золотарев</h3>
                     <p class="team__text text">Администратор</p>
                 </div>
             </li>
             <li class="team__item">
                 <div class="team__card team-card">
-                    <img src="./img/team-6.jpg" alt="team image" class="team__avatars">
+                    <img src="../img/team-6.jpg" alt="team image" class="team__avatars">
                     <h3 class="team-card__title">Максим Золотарев</h3>
                     <p class="team__text text">Администратор</p>
                 </div>
@@ -424,7 +491,7 @@
                 <h3 class="accordion__question">Вопрос 1</h3>
                 <button class="btn btn-reset accordion__close">
                     <svg>
-                        <use xlink:href="./img/sprite.svg#close"></use>
+                        <use xlink:href="../img/sprite.svg#close"></use>
                     </svg>
                 </button>
             </div>
@@ -437,7 +504,7 @@
                 <h3 class="accordion__question">Вопрос 2</h3>
                 <button class="btn btn-reset accordion__close">
                     <svg>
-                        <use xlink:href="./img/sprite.svg#close"></use>
+                        <use xlink:href="../img/sprite.svg#close"></use>
                     </svg>
                 </button>
             </div>
@@ -455,8 +522,11 @@
             <h2 class="contacts__title">Контакты</h2>
             <div class="contacts__left-links contact-links">
                 <label class="contacts-link__department link-department">
-                    <span class="contact-links__department">Главный офис</span>
+                    <span class="contact-links__department link-department__main">Главный офис</span>
                     <div class="link-department__question">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#question"></use>
+                        </svg>
                         <div class="link-department__answer">Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара просьба задавать в
                         отдел продаж</div>
                     </div>

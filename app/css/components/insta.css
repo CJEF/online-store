@@ -11,7 +11,8 @@
     grid-column: 8 span; }
   .insta-right__grid {
     grid-template-rows: 160px 160px;
-    grid-template-columns: 152px 330px 152px; }
+    grid-template-columns: 152px 330px 152px;
+    gap: 15px var(--grid-gap); }
   .insta-right__logo {
     margin-bottom: var(--small-offset); }
 

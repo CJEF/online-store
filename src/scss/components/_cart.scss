@@ -2,6 +2,15 @@
     margin-left: var(--main-offset);
     display: flex;
     align-items: center;
+    position: relative;
+
+    &.active .cart-modal {
+        display: block;
+    }
+
+    &.active .cart__text::before {
+        width: 100%;
+    }
 
     &__text {
         color: var(--color-white);
@@ -22,9 +31,7 @@
 
     }
 
-    &:hover &__text::before {
-        width: 100%;
-    }
+
 
     &__btn {
         display: flex;
@@ -36,6 +43,9 @@
             height: 20px;
             margin-left: 10px;
             object-fit: cover;
+        }
+        &:hover .cart__text::before {
+            width: 100%;
         }
     }
 
@@ -53,4 +63,92 @@
         justify-content: center;
         align-items: center;
     }
+    &-modal {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+
+        &__list {
+            max-height: 325px;
+            overflow-y: auto;
+            box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.25);
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            background-color: var(--color-white);
+            padding: var(--small-offset) var(--second-offset);
+        }
+
+    }
+
+    &-item {
+        min-width: 480px;
+        transition: .2s linear;
+        &:hover {
+            background-color: #F5F7FC;
+        }
+        &__img-wrap {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        &__img {
+            min-width: 100px;
+            max-height: 100px;
+            margin-right: var(--small-offset);
+        }
+        &__delete {
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            padding: 10px;
+            svg {
+                width: 20px;
+                height: 100%;
+            }
+            &:hover {
+                svg {
+                    opacity: .7;
+                }
+            }
+        }
+        &__content {
+            max-width: 268px;
+        }
+        &__title {
+            font: var(--font-book-14);
+            color: var(--color-matterhorn);
+            margin-bottom: var(--second-offset);
+        }
+        &__price {
+            font: var(--font-bold-20);
+            color: var(--color-matterhorn);
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--second-offset);
+        background-color: var(--color-white);
+        box-shadow: 0px -4px 10px rgba(0, 13, 84, 0.1);
+        &__res {
+            display: block;
+            font: var(--font-book-14);
+            color: var(--color-matterhorn);
+        }
+        &__price {
+            display: block;
+            color: var(--color-matterhorn);
+            font: var(--font-bold-20);
+            margin-top: var(--small-offset);
+        }
+        &__btn {
+            padding: 17px 47px;
+        }
+    }
+
 }

@@ -14,14 +14,81 @@
           <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
         </ul>
       </nav>
-      <div class="cart header__cart">
-        <button class="btn-reset cart__btn">
+      <div class="cart header__cart" id="cart">
+        <button class="btn-reset cart__btn" id="cart-btn">
           <span class="cart__text">Корзина</span>
           <svg>
             <use xlink:href="img/sprite.svg#cart"></use>
           </svg>
           <span class="cart__count">1</span>
         </button>
+        <div class="cart__modal cart-modal">
+          <ul class="cart-modal__list list-reset">
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="cart-modal__item cart-item">
+              <div class="cart-item__img-wrap">
+                <img src="../img/product-cart.jpg" class="cart-item__img" alt="product img">
+              </div>
+              <div class="cart-item__content">
+                <div class="cart-item__title">Женские кроссовки Puma Force 1 Shadow</div>
+                <div class="cart-item__price">8 678 ₽</div>
+              </div>
+              <button class="cart-item__delete btn-reset" aria-label="delete product from cart">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div class="cart-modal__footer cart-footer">
+            <div class="cart-footer__left">
+              <span class="cart-footer__res">Итого:</span>
+              <span class="cart-footer__price">25 789 ₽</span>
+            </div>
+            <button class="cart-footer__btn btn-reset btn btn--primary">Перейти в корзину</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

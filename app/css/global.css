@@ -14,6 +14,7 @@
   --color-aqua-haze: #F3F6F6;
   --color-jumbo: #808080;
   --color-eden: #0E5A4C;
+  --color-matterhorn: #4D4D4D;
   --grid-gap: 20px;
   --main-offset: 40px;
   --big-offset: 60px;
@@ -104,9 +105,6 @@ a {
   position: relative !important;
   left: -9999px !important; }
 
-.site-container {
-  overflow: hidden; }
-
 .is-hidden {
   display: none !important; }
 
@@ -168,7 +166,7 @@ a {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: var(--color-purple);
+    background-color: var(--color-river-bed);
     transition: .2s linear; }
   .btn--transparent:hover::before {
     width: 100%; }
