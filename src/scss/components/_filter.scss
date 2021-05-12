@@ -72,6 +72,12 @@
     opacity: 1;
     border: none;
     cursor: pointer;
+    box-shadow: none;
+}
+
+.noUi-target {
+    box-shadow: none;
+    border: none;
 }
 
 .noUi-horizontal {

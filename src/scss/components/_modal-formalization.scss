@@ -1,0 +1,93 @@
+.modal {
+
+    visibility: hidden;
+    transition: .3s ease-in-out;
+
+    &-formalization {
+
+        transform: scale(0);
+        transition: .3s ease-in-out;
+        visibility: hidden;
+        max-width: 580px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: var(--color-white);
+        z-index: 1001;
+
+        &__list {
+            max-height: none;
+        }
+
+
+        &__inner {
+            padding: var(--main-offset);
+        }
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--main-offset);
+        }
+        &__center {
+            padding: 30px;
+            border: 1px solid #D9D9D9;
+            border-radius: var(--border-radius);
+        }
+    }
+    &-center {
+        &__text {
+            display: inline-block;
+            font: var(--font-bold-16-16);
+            line-height: 1;
+        }
+        &__group {
+            margin-bottom: var(--second-offset);
+        }
+        &__about {
+
+        }
+        &__product {
+
+        }
+    }
+    &-formalization {
+        &__form {
+            margin-top: var(--main-offset);
+        }
+        &__list {
+            margin-top: 15px;
+            box-shadow: none;
+        }
+        &__item {
+            min-width: 440px;
+            padding: var(--small-offset) 0;
+        }
+    }
+
+
+    &-formalization-form {
+        &__btn {
+            margin-top: 30px;
+        }
+        &__input + &__input {
+            margin-top: var(--small-offset);
+        }
+        &__input {
+            background-color: #F7F7F7;
+            width: 100%;
+        }
+    }
+}
+
+// open modal
+
+.modal.active {
+    visibility: visible;
+}
+
+.modal.active .modal-formalization{
+    transform: scale(1);
+    visibility: visible;
+}

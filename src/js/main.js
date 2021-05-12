@@ -28,22 +28,29 @@ for (let anchor of anchors) {
 
 const cartBtn = document.querySelector('#cart-btn');
 const cartModal = document.querySelector(".cart-modal");
+const formalizationModalOverlay = document.querySelector(
+  "#modal-formalization-overlay"
+);
+const formalizationModalBtn = document.querySelector("#move-to-cart");
 
 cartBtn.addEventListener("click", () => {
   cart.classList.toggle("active");
 });
 
-// const cartModalY = () => {
-//   if (cart.classList.contains("active")) {
-//     return true
-//   }
-
-//   return false
-// }
+formalizationModalBtn.addEventListener("click", () => {
+  formalizationModalOverlay.classList.toggle("active");
+});
 
 document.addEventListener("click", (e) => {
   let target = e.target;
   if (!target.closest('#cart')) {
     cart.classList.remove("active");
+  }
+})
+
+document.addEventListener("click", (e) => {
+  let target = e.target;
+  if (target === formalizationModalOverlay) {
+    formalizationModalOverlay.classList.remove("active");
   }
 })

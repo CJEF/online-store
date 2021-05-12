@@ -15,6 +15,7 @@
   --color-jumbo: #808080;
   --color-eden: #0E5A4C;
   --color-matterhorn: #4D4D4D;
+  --color-overlay: rgba(68, 75, 88, 0.7);
   --grid-gap: 20px;
   --main-offset: 40px;
   --big-offset: 60px;
@@ -26,6 +27,7 @@
   --font-bold-30: 700 30px / 140% var(--font-family);
   --font-bold-30-30: 700 30px / 30px var(--font-family);
   --font-bold-20: 700 20px / 20px var(--font-family);
+  --font-bold-16-16: 700 16px / 16px var(--font-family);
   --font-regular-30: 400 30px / 140% var(--font-family);
   --font-book-18: 300 18px / 140% var(--font-family);
   --font-regular-16: 400 16px / 140% var(--font-family);
@@ -195,6 +197,11 @@ a {
   font: var(--font-book-16);
   margin: 0; }
 
+.text--gray {
+  font: var(--font-book-16);
+  color: var(--color-gray);
+  line-height: 1; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -257,5 +264,37 @@ input[type=number] {
 
 .active {
   display: block !important; }
+
+.input {
+  padding: var(--second-offset);
+  border-radius: var(--border-radius);
+  border: none;
+  display: block;
+  width: 500px; }
+  .input::-moz-placeholder {
+    color: var(--color-gray);
+    font: var(--font-book-16); }
+  .input:-ms-input-placeholder {
+    color: var(--color-gray);
+    font: var(--font-book-16); }
+  .input::placeholder {
+    color: var(--color-gray);
+    font: var(--font-book-16); }
+
+.vendor-code {
+  color: var(--color-gray);
+  font: var(--font-book-14);
+  line-height: 1; }
+
+.modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 1000;
+  background-color: var(--color-overlay); }
 
 /*# sourceMappingURL=global.css.map */

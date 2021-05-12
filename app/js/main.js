@@ -409,20 +409,26 @@ try {
 
 var cartBtn = document.querySelector('#cart-btn');
 var cartModal = document.querySelector(".cart-modal");
+var formalizationModalOverlay = document.querySelector("#modal-formalization-overlay");
+var formalizationModalBtn = document.querySelector("#move-to-cart");
 cartBtn.addEventListener("click", function () {
   cart.classList.toggle("active");
-}); // const cartModalY = () => {
-//   if (cart.classList.contains("active")) {
-//     return true
-//   }
-//   return false
-// }
-
+});
+formalizationModalBtn.addEventListener("click", function () {
+  formalizationModalOverlay.classList.toggle("active");
+});
 document.addEventListener("click", function (e) {
   var target = e.target;
 
   if (!target.closest('#cart')) {
     cart.classList.remove("active");
+  }
+});
+document.addEventListener("click", function (e) {
+  var target = e.target;
+
+  if (target === formalizationModalOverlay) {
+    formalizationModalOverlay.classList.remove("active");
   }
 });
 //# sourceMappingURL=main.js.map
