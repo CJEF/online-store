@@ -5,27 +5,27 @@ const quizData = [
     answer_alias: "type",
     answers: [
       {
-        answer_title: "кеды",
+        answer_title: "Мокасины",
         type: "checkbox",
       },
       {
-        answer_title: "кеды",
+        answer_title: "Топсайдеры",
         type: "checkbox",
       },
       {
-        answer_title: "кеды",
+        answer_title: "Челси",
         type: "checkbox",
       },
       {
-        answer_title: "кеды",
+        answer_title: "Чакка",
         type: "checkbox",
       },
       {
-        answer_title: "кеды",
+        answer_title: "Лоферы",
         type: "checkbox",
       },
       {
-        answer_title: "кеды",
+        answer_title: "Монки",
         type: "checkbox",
       },
     ],
@@ -67,7 +67,7 @@ const quizData = [
         type: "textarea",
       },
     ],
-  }
+  },
 ];
 
 const quizTemplate = (data = [], dataLength = 0, options) => {
@@ -77,7 +77,7 @@ const quizTemplate = (data = [], dataLength = 0, options) => {
 
     console.log(item);
 
-    if (item.type === 'checkbox' || 'radio') {
+    if (item.type === 'checkbox') {
       return `
           <li class="quiz-question__item">
               <label class="custom-checkbox quiz-question__label quiz-label">
@@ -95,21 +95,42 @@ const quizTemplate = (data = [], dataLength = 0, options) => {
         </label>
           </li>
       `;
-    } else if (item.answer_title == 'Введите сообщение') {
+    } else if (item.type === "radio") {
+      return `
+      <div class="quiz-question__label-wrap">
+        <label class="quiz-question__label">
+         <input class="quiz-qustion__radio custom-radio__field" type="${item.type}" id="quizRadio">
+         <span>${item.answer_title}</span>
+        </label>
+      </div>
+      `;
+    } else if (item.answer_title == "Введите сообщение") {
       return `
         <label class="quiz-question__label">
-          <textarea placeholder="${item.answer_title}" type="${item.type}" data-valid="false" class="quiz-question__textarea" name="${data.answer_alias}" ${item.type == 'textarea' ? 'placeholder="Введите ваш вариант"' : ''} value="${item.type !== 'text' ? item.answer_title : ''}">
+          <textarea placeholder="${item.answer_title}" type="${
+        item.type
+      }" data-valid="false" class="quiz-question__textarea" name="${
+        data.answer_alias
+      }" ${
+        item.type == "textarea" ? 'placeholder="Введите ваш вариант"' : ""
+      } value="${item.type !== "text" ? item.answer_title : ""}">
           <span>${item.answer_title}</span>
         </label>
       `;
     } else {
       return `
         <label class="quiz-question__label">
-          <input type="${item.type}" data-valid="false" class="quiz-question__answer" name="${data.answer_alias}" ${item.type == 'text' ? 'placeholder="Введите ваш вариант"' : ''} value="${item.type !== 'text' ? item.answer_title : ''}">
+          <input type="${
+            item.type
+          }" data-valid="false" class="quiz-question__answer" name="${
+        data.answer_alias
+      }" ${
+        item.type == "text" ? 'placeholder="Введите ваш вариант"' : ""
+      } value="${item.type !== "text" ? item.answer_title : ""}">
           <span>${item.answer_title}</span>
         </label>
       `;
-    } 
+    }
   });
 
   return `
@@ -149,7 +170,7 @@ class Quiz {
   }
 
   nextQuestion() {
-    console.log("next question!");
+    // console.log("next question!");
 
     let quizLast = document.querySelector('.quiz-form__last')
 
@@ -172,7 +193,7 @@ class Quiz {
       } else {
         document.querySelector('.quiz-form__questions').style.display = "none"
         document.querySelector('.quiz-form__last').style.display = "block"
-        console.log("А все! конец!");
+        // console.log("А все! конец!");
       }
     } else {
       console.log("Не валидно!");

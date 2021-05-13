@@ -1,0 +1,186 @@
+.modal {
+    display: none;
+    transition: .3s linear;
+    &-product {
+        transform: scale(0);
+        visibility: hidden;
+        width: 1160px;
+        position: relative;
+        margin: auto;
+        background-color: var(--color-white);
+        &__inner {
+            padding: var(--main-offset) 130px var(--main-offset) var(--main-offset);
+        }
+        &__top {
+            margin-bottom: var(--main-offset);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__slider {
+            width: 520px;
+            max-width: 520px;
+        }
+        &__about {
+            width: 430px;
+            max-width: 430px;
+            margin-left:  var(--second-offset);
+        }
+        &__bottom {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.product-about {
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--main-offset);
+    }
+    &__main {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+    &__availability {
+        margin-left: 50px;
+        font: var(--font-book-16-16);
+        color: var(--color-gray);
+        span {
+            color: var(--color-river-bed);
+        }
+    }
+    &__title {
+        font: var(--font-book-24);
+        line-height: 140%;
+        margin-bottom: var(--second-offset);
+    }
+    &__size-span {
+        font: var(--font-book-16-16);
+        display: inline-block;
+        margin-bottom: var(--second-offset);
+    }
+    &__raiting {
+        margin-bottom: var(--second-offset);
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__size-btns {
+
+    }
+    &__item + &__item {
+        margin-left: var(--second-offset);
+    }
+    &__price {
+        margin-top: var(--main-offset);
+    }
+    &__main-bottom {
+        margin-top: 71px;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+    }
+    &__online-price {
+        font: var(--font-bold-30-30);
+    }
+    &__offline-price {
+        font: var(--font-book-16-16);
+        color: var(--color-gray);
+        margin-left: var(--second-offset);
+    }
+    &__pros-list {
+        margin-top: var(--second-offset);
+    }
+    &__pros-item {
+        position: relative;
+        font: var(--font-book-14);
+        padding-left: 25px;
+        line-height: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 11px;
+            background-image: url('../../img/right_icon.svg');
+        }
+    }
+    &__pros-item + &__pros-item {
+        margin-top: var(--small-offset);
+    }
+    &__btn {
+        width: 100%;
+    }
+}
+
+.modal-product-bottom {
+    &__feature {
+        width: 430px;
+        margin-left: var(--second-offset);
+    }
+    &__description {
+        width: 520px;
+    }
+}
+
+.product {
+    &-description {
+        &__title {
+            margin-bottom: var(--second-offset);
+            font: var(--font-book-24);
+        }
+        &__text {
+            max-width: 480px;
+            margin: 0;
+            font: var(--font-book-16);
+        }
+    }
+    &-feature__item {
+        margin-bottom: var(--small-offset);
+        span {
+            font: var(--font-book-16-16);
+        }
+    }
+}
+
+.product {
+    &-slider {
+        &__item {
+            width: 70px;
+            height: 75px;
+            border-radius: var(--border-radius);
+            &-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__item + &__item {
+            margin-left: var(--second-offset);
+        }
+        &__track {
+            display: flex;
+            margin-top: var(--second-offset);
+        }
+        &__main {
+            width: 520px;
+            height: 460px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.modal-product-overlay.active .modal-product {
+    transform: scale(1);
+    visibility: visible;
+}

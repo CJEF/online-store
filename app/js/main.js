@@ -76,22 +76,22 @@ var quizData = [{
   title: "Какой тип кроссовок рассматриваете?",
   answer_alias: "type",
   answers: [{
-    answer_title: "кеды",
+    answer_title: "Мокасины",
     type: "checkbox"
   }, {
-    answer_title: "кеды",
+    answer_title: "Топсайдеры",
     type: "checkbox"
   }, {
-    answer_title: "кеды",
+    answer_title: "Челси",
     type: "checkbox"
   }, {
-    answer_title: "кеды",
+    answer_title: "Чакка",
     type: "checkbox"
   }, {
-    answer_title: "кеды",
+    answer_title: "Лоферы",
     type: "checkbox"
   }, {
-    answer_title: "кеды",
+    answer_title: "Монки",
     type: "checkbox"
   }]
 }, {
@@ -134,12 +134,14 @@ var quizTemplate = function quizTemplate() {
   var answers = data.answers.map(function (item) {
     console.log(item);
 
-    if (item.type === 'checkbox' || 'radio') {
+    if (item.type === 'checkbox') {
       return "\n          <li class=\"quiz-question__item\">\n              <label class=\"custom-checkbox quiz-question__label quiz-label\">\n                  <img src=\"img/sneaker.jpg\" alt=\"product image\">\n                  <div class=\"quiz-label__bottom\">\n          <input type=\"".concat(item.type, "\" data-valid=\"false\" class=\"quiz-question__answer custom-checkbox__field\" name=\"").concat(data.answer_alias, "\" ").concat(item.type == "text" ? 'placeholder="Введите ваш вариант"' : "", " value=\"").concat(item.type !== "text" ? item.answer_title : "", "\">\n          <span class=\"custom-checkbox__text\">").concat(item.answer_title, "</span>\n                  </div>\n        </label>\n          </li>\n      ");
-    } else if (item.answer_title == 'Введите сообщение') {
-      return "\n        <label class=\"quiz-question__label\">\n          <textarea placeholder=\"".concat(item.answer_title, "\" type=\"").concat(item.type, "\" data-valid=\"false\" class=\"quiz-question__textarea\" name=\"").concat(data.answer_alias, "\" ").concat(item.type == 'textarea' ? 'placeholder="Введите ваш вариант"' : '', " value=\"").concat(item.type !== 'text' ? item.answer_title : '', "\">\n          <span>").concat(item.answer_title, "</span>\n        </label>\n      ");
+    } else if (item.type === "radio") {
+      return "\n      <div class=\"quiz-question__label-wrap\">\n        <label class=\"quiz-question__label\">\n         <input class=\"quiz-qustion__radio custom-radio__field\" type=\"".concat(item.type, "\" id=\"quizRadio\">\n         <span>").concat(item.answer_title, "</span>\n        </label>\n      </div>\n      ");
+    } else if (item.answer_title == "Введите сообщение") {
+      return "\n        <label class=\"quiz-question__label\">\n          <textarea placeholder=\"".concat(item.answer_title, "\" type=\"").concat(item.type, "\" data-valid=\"false\" class=\"quiz-question__textarea\" name=\"").concat(data.answer_alias, "\" ").concat(item.type == "textarea" ? 'placeholder="Введите ваш вариант"' : "", " value=\"").concat(item.type !== "text" ? item.answer_title : "", "\">\n          <span>").concat(item.answer_title, "</span>\n        </label>\n      ");
     } else {
-      return "\n        <label class=\"quiz-question__label\">\n          <input type=\"".concat(item.type, "\" data-valid=\"false\" class=\"quiz-question__answer\" name=\"").concat(data.answer_alias, "\" ").concat(item.type == 'text' ? 'placeholder="Введите ваш вариант"' : '', " value=\"").concat(item.type !== 'text' ? item.answer_title : '', "\">\n          <span>").concat(item.answer_title, "</span>\n        </label>\n      ");
+      return "\n        <label class=\"quiz-question__label\">\n          <input type=\"".concat(item.type, "\" data-valid=\"false\" class=\"quiz-question__answer\" name=\"").concat(data.answer_alias, "\" ").concat(item.type == "text" ? 'placeholder="Введите ваш вариант"' : "", " value=\"").concat(item.type !== "text" ? item.answer_title : "", "\">\n          <span>").concat(item.answer_title, "</span>\n        </label>\n      ");
     }
   });
   return "\n    <div class=\"quiz-question\">\n      <h3 class=\"quiz-question__title\">".concat(title, "</h3>\n      <ul class=\"quiz-question__answers list-reset grid\">\n        ").concat(answers.join(""), "\n      </ul>\n              <div class=\"quiz__bottom\">\n            <div class=\"quiz-question__count\">").concat(number, " \u0438\u0437 ").concat(dataLength, "</div>\n          <button type=\"button\" class=\"quiz-question__btn btn btn-reset btn--transparent-border\" data-next-btn>").concat(nextBtnText, "</button>\n              </div>\n    </div>\n\t");
@@ -169,7 +171,7 @@ var Quiz = /*#__PURE__*/function () {
   }, {
     key: "nextQuestion",
     value: function nextQuestion() {
-      console.log("next question!");
+      // console.log("next question!");
       var quizLast = document.querySelector('.quiz-form__last');
 
       if (this.valid()) {
@@ -185,8 +187,7 @@ var Quiz = /*#__PURE__*/function () {
           }
         } else {
           document.querySelector('.quiz-form__questions').style.display = "none";
-          document.querySelector('.quiz-form__last').style.display = "block";
-          console.log("А все! конец!");
+          document.querySelector('.quiz-form__last').style.display = "block"; // console.log("А все! конец!");
         }
       } else {
         console.log("Не валидно!");
@@ -337,28 +338,30 @@ window.quiz = new Quiz(".quiz-form .quiz-questions", quizData, {
   nextBtnText: "Следующий шаг",
   sendBtnText: "Получить"
 });
+// var myMap;
+// // Дождёмся загрузки API и готовности DOM.
+// ymaps.ready(init);
+// function init() {
+//   // Создание экземпляра карты и его привязка к контейнеру с
+//   // заданным id ("map").
+//   myMap = new ymaps.Map(
+//     "map",
+//     {
+//       // При инициализации карты обязательно нужно указать
+//       // её центр и коэффициент масштабирования.
+//       center: [55.76, 37.64], // Москва
+//       zoom: 10,
+//     },
+//     {
+//       searchControlProvider: "yandex#search",
+//     }
+//   );
+// //   document.getElementById("destroyButton").onclick = function () {
+// //     // Для уничтожения используется метод destroy.
+// //     myMap.destroy();
+// //   };
+// }
 "use strict";
-
-var myMap; // Дождёмся загрузки API и готовности DOM.
-
-ymaps.ready(init);
-
-function init() {
-  // Создание экземпляра карты и его привязка к контейнеру с
-  // заданным id ("map").
-  myMap = new ymaps.Map("map", {
-    // При инициализации карты обязательно нужно указать
-    // её центр и коэффициент масштабирования.
-    center: [55.76, 37.64],
-    // Москва
-    zoom: 10
-  }, {
-    searchControlProvider: "yandex#search"
-  }); //   document.getElementById("destroyButton").onclick = function () {
-  //     // Для уничтожения используется метод destroy.
-  //     myMap.destroy();
-  //   };
-}
 "use strict";
 
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
@@ -399,36 +402,72 @@ try {
 
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
     _loop();
-  } // cart
-
+  }
 } catch (err) {
   _iterator.e(err);
 } finally {
   _iterator.f();
 }
 
+var body = document.querySelector("body");
 var cartBtn = document.querySelector('#cart-btn');
 var cartModal = document.querySelector(".cart-modal");
 var formalizationModalOverlay = document.querySelector("#modal-formalization-overlay");
 var formalizationModalBtn = document.querySelector("#move-to-cart");
+var modalProductOverlay = document.querySelector("#modal-product-overlay");
+var productCardBtn = document.querySelectorAll(".move-to-product-card");
+var burgerMenu = document.querySelector("#burger-menu");
+/* ======================================== */
+
 cartBtn.addEventListener("click", function () {
-  cart.classList.toggle("active");
-});
-formalizationModalBtn.addEventListener("click", function () {
-  formalizationModalOverlay.classList.toggle("active");
+  cart.classList.toggle("active"); // body.classList.toggle("overflow-hidden");
 });
 document.addEventListener("click", function (e) {
   var target = e.target;
 
-  if (!target.closest('#cart')) {
-    cart.classList.remove("active");
+  if (!target.closest("#cart")) {
+    cart.classList.remove("active"); // body.classList.remove("overflow-hidden");
   }
+});
+/* ========================================= */
+
+/* ======================================== */
+
+formalizationModalBtn.addEventListener("click", function () {
+  formalizationModalOverlay.classList.toggle("active");
+  body.classList.toggle("overflow-hidden");
 });
 document.addEventListener("click", function (e) {
   var target = e.target;
 
   if (target === formalizationModalOverlay) {
     formalizationModalOverlay.classList.remove("active");
+    body.classList.remove("overflow-hidden");
   }
+});
+/* ======================================== */
+
+/* ======================================== */
+
+productCardBtn.forEach(function (el) {
+  el.addEventListener("click", function () {
+    modalProductOverlay.classList.toggle("active");
+    body.classList.toggle("overflow-hidden");
+  });
+});
+document.addEventListener("click", function (e) {
+  var target = e.target;
+
+  if (target === modalProductOverlay) {
+    modalProductOverlay.classList.remove("active");
+    body.classList.remove("overflow-hidden");
+  }
+});
+/* ======================================== */
+
+/* ======================================== */
+
+burgerMenu.addEventListener("click", function () {
+  burgerMenu.classList.toggle("open");
 });
 //# sourceMappingURL=main.js.map

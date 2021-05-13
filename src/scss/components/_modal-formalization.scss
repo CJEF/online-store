@@ -1,7 +1,7 @@
 .modal {
 
-    visibility: hidden;
-    transition: .3s ease-in-out;
+    // visibility: hidden;
+    // transition: .3s ease-in-out;
 
     &-formalization {
 
@@ -83,11 +83,7 @@
 
 // open modal
 
-.modal.active {
-    visibility: visible;
-}
-
-.modal.active .modal-formalization{
+.modal-formalization-overlay.active .modal-formalization{
     transform: scale(1);
     visibility: visible;
 }

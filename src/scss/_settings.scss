@@ -44,7 +44,7 @@ a {
 }
 
 .site-container {
-  // overflow-x: hidden;
+  overflow: hidden;
 }
 
 .is-hidden {
@@ -235,6 +235,9 @@ input[type=number] {
 
 .active {
   display: block !important;
+  &--flex {
+    display: flex !important;
+  }
 }
 
 .input {
@@ -255,6 +258,10 @@ input[type=number] {
   line-height: 1;
 }
 
+/*
+==================== * Modal * =====================
+*/
+
 .modal-overlay {
   display: flex;
   position: fixed;
@@ -265,4 +272,30 @@ input[type=number] {
   margin: auto;
   z-index: 1000;
   background-color: var(--color-overlay);
+}
+
+.modal.active {
+    display: flex !important;
+    overflow: auto;
+}
+
+.product-size__list {
+  display: flex;
+}
+
+.product-size__btn {
+  padding: 9px 25.5px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  font: var(--font-book-14);
+  line-height: 1;
+  transition: .2s ease-in-out;
+  &:hover {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

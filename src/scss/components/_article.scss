@@ -8,6 +8,15 @@
 }
 
 .product-article {
+    &__img-wrap {
+        width: 280px;
+        height: 293px;
+    }
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
     &__hover-block {
         opacity: 0;
         transition: .2s ease-in;

@@ -1,7 +1,7 @@
 .header {
     color: var(--color-white);
     background-color: var(--color-purple);
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,10 +28,32 @@
         grid-column: 2 span;
     }
 
+    &__burger {
+        grid-column: 1 span;
+        grid-column-start: 13;
+    }
+
     &__right {
         grid-column: 10 span;
         display: flex;
         align-items: baseline;
         justify-content: flex-end;
+        transition: .3s linear;
+
+        @media (max-width: 1110px) {
+            position: absolute;
+            top: 0%;
+            right: -100%;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--color-white);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 1110px) {
+
     }
 }
