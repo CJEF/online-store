@@ -94,3 +94,13 @@ document.addEventListener("click", (e) => {
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("open");
 })
+
+// modal close btn
+
+const modalClose = document.querySelectorAll(".modal-close-btn")
+
+modalClose.forEach((el) => {
+  el.addEventListener("click", () => {
+    el.closest(".modal").classList.remove("active");
+  });
+});

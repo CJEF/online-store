@@ -9,6 +9,7 @@
         margin: auto;
         background-color: var(--color-white);
         &__inner {
+            position: relative;
             padding: var(--main-offset) 130px var(--main-offset) var(--main-offset);
         }
         &__top {

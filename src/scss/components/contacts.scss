@@ -9,10 +9,16 @@
     }
     &__left {
         grid-column: 5 span;
+        @media (max-width: 768px) {
+            grid-column: 12 span;
+        }
     }
     &__map {
         grid-column: 7 span;
         max-height: 500px;
+        @media (max-width: 768px) {
+            grid-column: 12 span;
+        }
     }
     &-left__socials {
         margin-top: var(--main-offset);

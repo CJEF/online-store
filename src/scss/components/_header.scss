@@ -12,6 +12,9 @@
         align-items: center;
         padding: var(--second-offset) var(--paddings);
         position: relative;
+        @media (max-width: 360px) {
+            padding: var(--small-offset) var(--second-offset);
+        }
         &::before {
             content: '';
             position: absolute;

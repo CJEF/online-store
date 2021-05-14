@@ -2,13 +2,22 @@
   padding: 70px 0 80px; }
   .insta__inner {
     gap: var(--big-offset); }
+    @media (max-width: 1110px) {
+      .insta__inner {
+        gap: var(--small-offset); } }
   .insta__left {
     grid-column: 4 span; }
+    @media (max-width: 1050px) {
+      .insta__left {
+        grid-column: 12 span; } }
   .insta__right {
     display: flex;
     align-items: center;
     flex-direction: column;
     grid-column: 8 span; }
+    @media (max-width: 1050px) {
+      .insta__right {
+        grid-column: 12 span; } }
   .insta-right__grid {
     grid-template-rows: 160px 160px;
     grid-template-columns: 152px 330px 152px;

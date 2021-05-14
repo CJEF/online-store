@@ -37,6 +37,9 @@
   .burger.open ~ .header__right {
     top: calc(100% - 82px);
     right: 0; }
+    @media (max-width: 360px) {
+      .burger.open ~ .header__right {
+        top: calc(100% - 62px); } }
   @media (max-width: 1110px) {
     .burger {
       display: flex; } }

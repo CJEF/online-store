@@ -1,6 +1,9 @@
 .faq {
     &__container {
-        padding: 60px 15px;
+        padding: var(--big-offset) 15px;
+        @media (max-width: 450px) {
+            padding: var(--main-offset) 15px;
+        }
     }
     &__title {
         margin-bottom: var(--main-offset);
@@ -41,6 +44,9 @@
         background-color: transparent;
         cursor: pointer;
         user-select: none;
+        @media (max-width: 450px) {
+            padding: var(--second-offset) 0;
+        }
     }
     &__close {
         svg {
@@ -67,6 +73,9 @@
     &.open &__res {
         opacity: 1;
         padding-bottom: 18px;
+        @media (max-width: 450px) {
+            padding-bottom: 0;
+        }
     }
     &__close {
         transition: .3s;

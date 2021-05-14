@@ -1,14 +1,26 @@
 .quiz {
     padding: var(--big-offset) 0;
+    @media (max-width: 450px) {
+        padding: var(--second-offset) 0;
+    }
     &__content {
         padding: var(--main-offset) 100px;
         border-radius: var(--border-radius);
         background-color: var(--color-seashell-peach);
+        @media (max-width: 1050px) {
+            padding: var(--main-offset) var(--second-offset);
+        }
+        @media (max-width: 450px) {
+            padding: var(--second-offset);
+        }
     }
 
     &__title {
         margin-bottom: var(--second-offset);
         font: var(--font-bold-30-30);
+        @media (max-width: 450px) {
+            font-size: 26px;
+        }
     }
 
     &__descr {
@@ -27,6 +39,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 360px) {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
     &-form__last {
         margin-top: var(--second-offset);
@@ -66,11 +82,19 @@
 
 .quiz-questions {
     padding: var(--second-offset) 0;
+    @media (max-width: 450px) {
+        padding-bottom: 0;
+    }
 }
 
 .quiz-question {
     &__label {
         display: block;
+        @media (max-width: 500px) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
     }
     &__title {
         font: var(--font-book-24);
@@ -84,6 +108,18 @@
         padding-bottom: var(--main-offset);
         border-bottom: 1px solid var(--color-jumbo);
         margin-bottom: var(--second-offset);
+        @media (max-width: 1050px) {
+            gap: var(--second-offset);
+        }
+        @media (max-width: 765px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: 450px) {
+            padding-bottom: var(--second-offset);
+        }
     }
     &__item {
         img {
@@ -102,6 +138,12 @@
         &::placeholder {
             color: var(--color-cameo);
             font: var(--font-book-16-16);
+        }
+    }
+    &__btn {
+        @media (max-width: 360px) {
+            margin-top: var(--small-offset);
+            width: 100%;
         }
     }
 }

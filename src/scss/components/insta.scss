@@ -2,15 +2,24 @@
     padding: 70px 0 80px;
     &__inner {
         gap: var(--big-offset);
+        @media (max-width: 1110px) {
+            gap: var(--small-offset);
+        }
     }
     &__left {
         grid-column: 4 span;
+        @media (max-width: 1050px) {
+            grid-column: 12 span;
+        }
     }
     &__right {
         display: flex;
         align-items: center;
         flex-direction: column;
         grid-column: 8 span;
+        @media (max-width: 1050px) {
+            grid-column: 12 span;
+        }
     }
     &-right__grid {
         grid-template-rows: 160px 160px;

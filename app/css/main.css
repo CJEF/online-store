@@ -628,7 +628,8 @@
   .modal-formalization__list {
     max-height: none; }
   .modal-formalization__inner {
-    padding: var(--main-offset); }
+    position: relative;
+    padding: var(--big-offset) var(--main-offset) var(--main-offset); }
   .modal-formalization__top {
     display: flex;
     justify-content: space-between;
@@ -682,6 +683,7 @@
     margin: auto;
     background-color: var(--color-white); }
     .modal-product__inner {
+      position: relative;
       padding: var(--main-offset) 130px var(--main-offset) var(--main-offset); }
     .modal-product__top {
       margin-bottom: var(--main-offset);
@@ -866,6 +868,9 @@
   .burger.open ~ .header__right {
     top: calc(100% - 82px);
     right: 0; }
+    @media (max-width: 360px) {
+      .burger.open ~ .header__right {
+        top: calc(100% - 62px); } }
   @media (max-width: 1110px) {
     .burger {
       display: flex; } }
@@ -883,6 +888,9 @@
     align-items: center;
     padding: var(--second-offset) var(--paddings);
     position: relative; }
+    @media (max-width: 360px) {
+      .header__container {
+        padding: var(--small-offset) var(--second-offset); } }
     .header__container::before {
       content: '';
       position: absolute;
@@ -1111,6 +1119,9 @@
     position: relative;
     z-index: 2;
     padding: 60px 15px 20px; }
+    @media (max-width: 450px) {
+      .team__container {
+        padding: 40px 15px 20px; } }
   .team__title {
     margin-bottom: var(--main-offset);
     color: var(--color-white); }
@@ -1121,6 +1132,15 @@
   .team__item {
     grid-column: 4 span;
     margin-bottom: var(--main-offset); }
+    @media (max-width: 765px) {
+      .team__item {
+        grid-column: 6 span; } }
+    @media (max-width: 430px) {
+      .team__item {
+        grid-column: 12 span; } }
+    @media (max-width: 450px) {
+      .team__item {
+        margin-bottom: var(--small-offset); } }
   .team__text {
     color: var(--color-white); }
   .team-card__title {
@@ -1239,13 +1259,25 @@
 
 .quiz {
   padding: var(--big-offset) 0; }
+  @media (max-width: 450px) {
+    .quiz {
+      padding: var(--second-offset) 0; } }
   .quiz__content {
     padding: var(--main-offset) 100px;
     border-radius: var(--border-radius);
     background-color: var(--color-seashell-peach); }
+    @media (max-width: 1050px) {
+      .quiz__content {
+        padding: var(--main-offset) var(--second-offset); } }
+    @media (max-width: 450px) {
+      .quiz__content {
+        padding: var(--second-offset); } }
   .quiz__title {
     margin-bottom: var(--second-offset);
     font: var(--font-bold-30-30); }
+    @media (max-width: 450px) {
+      .quiz__title {
+        font-size: 26px; } }
   .quiz__descr {
     font: var(--font-book-16-16);
     color: var(--color-jumbo);
@@ -1258,6 +1290,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (max-width: 360px) {
+      .quiz__bottom {
+        flex-direction: column;
+        justify-content: center; } }
   .quiz-form__last {
     margin-top: var(--second-offset);
     border-radius: var(--border-radius);
@@ -1286,9 +1322,17 @@
 
 .quiz-questions {
   padding: var(--second-offset) 0; }
+  @media (max-width: 450px) {
+    .quiz-questions {
+      padding-bottom: 0; } }
 
 .quiz-question__label {
   display: block; }
+  @media (max-width: 500px) {
+    .quiz-question__label {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; } }
 
 .quiz-question__title {
   font: var(--font-book-24);
@@ -1302,6 +1346,18 @@
   padding-bottom: var(--main-offset);
   border-bottom: 1px solid var(--color-jumbo);
   margin-bottom: var(--second-offset); }
+  @media (max-width: 1050px) {
+    .quiz-question__answers {
+      gap: var(--second-offset); } }
+  @media (max-width: 765px) {
+    .quiz-question__answers {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) {
+    .quiz-question__answers {
+      grid-template-columns: 1fr; } }
+  @media (max-width: 450px) {
+    .quiz-question__answers {
+      padding-bottom: var(--second-offset); } }
 
 .quiz-question__item img {
   margin-bottom: var(--small-offset); }
@@ -1325,8 +1381,16 @@
     color: var(--color-cameo);
     font: var(--font-book-16-16); }
 
+@media (max-width: 360px) {
+  .quiz-question__btn {
+    margin-top: var(--small-offset);
+    width: 100%; } }
+
 .faq__container {
-  padding: 60px 15px; }
+  padding: var(--big-offset) 15px; }
+  @media (max-width: 450px) {
+    .faq__container {
+      padding: var(--main-offset) 15px; } }
 
 .faq__title {
   margin-bottom: var(--main-offset); }
@@ -1360,6 +1424,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    @media (max-width: 450px) {
+      .accordion__header {
+        padding: var(--second-offset) 0; } }
   .accordion__close svg {
     width: 25px;
     height: 25px;
@@ -1383,6 +1450,9 @@
   .accordion.open .accordion__res {
     opacity: 1;
     padding-bottom: 18px; }
+    @media (max-width: 450px) {
+      .accordion.open .accordion__res {
+        padding-bottom: 0; } }
   .accordion__close {
     transition: .3s; }
   .accordion.open .accordion__close {
@@ -1397,9 +1467,15 @@
     margin-bottom: var(--big-offset); }
   .contacts__left {
     grid-column: 5 span; }
+    @media (max-width: 768px) {
+      .contacts__left {
+        grid-column: 12 span; } }
   .contacts__map {
     grid-column: 7 span;
     max-height: 500px; }
+    @media (max-width: 768px) {
+      .contacts__map {
+        grid-column: 12 span; } }
   .contacts-left__socials {
     margin-top: var(--main-offset); }
   .contacts__left-links + .contacts__left-links {
@@ -1498,13 +1574,22 @@
   padding: 70px 0 80px; }
   .insta__inner {
     gap: var(--big-offset); }
+    @media (max-width: 1110px) {
+      .insta__inner {
+        gap: var(--small-offset); } }
   .insta__left {
     grid-column: 4 span; }
+    @media (max-width: 1050px) {
+      .insta__left {
+        grid-column: 12 span; } }
   .insta__right {
     display: flex;
     align-items: center;
     flex-direction: column;
     grid-column: 8 span; }
+    @media (max-width: 1050px) {
+      .insta__right {
+        grid-column: 12 span; } }
   .insta-right__grid {
     grid-template-rows: 160px 160px;
     grid-template-columns: 152px 330px 152px;

@@ -6,6 +6,9 @@
         position: relative;
         z-index: 2;
         padding: 60px 15px 20px;
+        @media (max-width: 450px) {
+            padding: 40px 15px 20px;
+        }
     }
     &__title {
         margin-bottom: var(--main-offset);
@@ -19,6 +22,15 @@
     &__item {
         grid-column: 4 span;
         margin-bottom: var(--main-offset);
+        @media (max-width: 765px) {
+            grid-column: 6 span;
+        }
+        @media (max-width: 430px) {
+            grid-column: 12 span;
+        }
+        @media (max-width: 450px) {
+            margin-bottom: var(--small-offset);
+        }
     }
     &__text {
         color: var(--color-white);

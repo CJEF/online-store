@@ -20,10 +20,9 @@
         &__list {
             max-height: none;
         }
-
-
         &__inner {
-            padding: var(--main-offset);
+            position: relative;
+            padding: var(--big-offset) var(--main-offset) var(--main-offset);
         }
         &__top {
             display: flex;

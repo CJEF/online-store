@@ -7,9 +7,15 @@
     margin-bottom: var(--big-offset); }
   .contacts__left {
     grid-column: 5 span; }
+    @media (max-width: 768px) {
+      .contacts__left {
+        grid-column: 12 span; } }
   .contacts__map {
     grid-column: 7 span;
     max-height: 500px; }
+    @media (max-width: 768px) {
+      .contacts__map {
+        grid-column: 12 span; } }
   .contacts-left__socials {
     margin-top: var(--main-offset); }
   .contacts__left-links + .contacts__left-links {
