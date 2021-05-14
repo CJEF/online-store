@@ -476,4 +476,12 @@ modalClose.forEach(function (el) {
     body.classList.remove("overflow-hidden");
   });
 });
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((el) => {
+  el.addEventListener("click", () => {
+    burgerMenu.classList.remove("open");
+  });
+});
 //# sourceMappingURL=main.js.map
