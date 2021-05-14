@@ -342,4 +342,10 @@ input[type=number] {
   .modal-close-btn:active {
     transform: translateY(5px); }
 
+@media (max-width: 768px) {
+  .ymaps-2-1-78-map {
+    height: 350px !important;
+  }
+}
+
 /*# sourceMappingURL=global.css.map */
