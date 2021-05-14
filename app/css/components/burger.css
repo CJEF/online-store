@@ -35,7 +35,7 @@
       position: absolute;
       transform: rotate3d(0, 0, 1, -45deg); }
   .burger.open ~ .header__right {
-    top: 100%;
+    top: calc(100% - 82px);
     right: 0; }
   @media (max-width: 1110px) {
     .burger {

@@ -47,7 +47,7 @@
         }
 
         & ~ .header__right {
-            top: 100%;
+            top: calc(100% - 82px);
             right: 0;
         }
     }

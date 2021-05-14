@@ -2,17 +2,6 @@
 @import "./mixins/_mini";
 @import "./vendor/nouislider.min";
 
-// большие компоненты
-@import "./components/header";
-@import "./components/hero";
-@import "./components/_catalog";
-@import "./components/team.scss";
-@import "./components/_about";
-@import "./components/_quiz";
-@import "./components/faq";
-@import "./components/contacts";
-@import "./components/insta";
-@import "./components/footer";
 
 // маленькие компоненты
 @import "./components/nav";
@@ -25,3 +14,15 @@
 @import "./components/_modal-formalization";
 @import "./components/_modal-product";
 @import "./components/burger";
+
+// большие компоненты
+@import "./components/header";
+@import "./components/hero";
+@import "./components/_catalog";
+@import "./components/team.scss";
+@import "./components/_about";
+@import "./components/_quiz";
+@import "./components/faq";
+@import "./components/contacts";
+@import "./components/insta";
+@import "./components/footer";

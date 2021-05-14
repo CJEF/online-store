@@ -16,6 +16,8 @@
     }
     &__btn-apply {
         margin-top: var(--second-offset);
+        width: 100%;
+        padding: 22px 0;
     }
     &__btn-reset {
         margin-top: var(--second-offset);
@@ -32,6 +34,9 @@
     &__labels {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 500px) {
+            justify-content: space-around;
+        }
     }
     &__label {
 
@@ -43,6 +48,7 @@
         font: var(--font-book-16);
         border-collapse: collapse;
         user-select: none;
+        margin: 0 auto;
         td {
             border: 1px solid var(--color-cameo);
             width: 80px;

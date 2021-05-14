@@ -28,7 +28,19 @@
             transition: .2s ease-in-out;
             background-color: var(--color-white);
         }
-
+        @media (max-width: 1110px) {
+            color: var(--color-white);
+            font-size: 60px;
+        }
+        @media (max-width: 786px) {
+            font-size: 50px;
+        }
+        @media (max-width: 650px) {
+            font-size: 35px;
+        }
+        @media (max-width: 400px) {
+            font-size: 28px;
+        }
     }
 
 
@@ -43,6 +55,9 @@
             height: 20px;
             margin-left: 10px;
             object-fit: cover;
+            @media (max-width: 1110px) {
+
+                }
         }
         &:hover .cart__text::before {
             width: 100%;
