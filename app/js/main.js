@@ -473,6 +473,7 @@ var modalClose = document.querySelectorAll(".modal-close-btn");
 modalClose.forEach(function (el) {
   el.addEventListener("click", function () {
     el.closest(".modal").classList.remove("active");
+    body.classList.remove("overflow-hidden");
   });
 });
 //# sourceMappingURL=main.js.map

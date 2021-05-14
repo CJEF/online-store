@@ -26,6 +26,9 @@
         @media (max-width: 930px) {
             grid-column: 12 span;
         }
+        @media (max-width: 930px) {
+            margin-top: var(--second-offset);
+        }
         &-grid {
             display: grid;
             grid-template-columns: repeat(9, 1fr);

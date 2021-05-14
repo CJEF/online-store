@@ -1,5 +1,8 @@
 .insta {
     padding: 70px 0 80px;
+    @media (max-width: 1050px) {
+        padding: 30px 0 30px;
+    }
     &__inner {
         gap: var(--big-offset);
         @media (max-width: 1110px) {
@@ -25,6 +28,11 @@
         grid-template-rows: 160px 160px;
         grid-template-columns: 152px 330px 152px;
         gap: 15px var(--grid-gap);
+        @media (max-width: 768px) {
+            grid-template-rows: repeat(4, 140px);
+            grid-template-columns: repeat(2, 46%);
+        }
+
     }
     &-right__logo {
         margin-bottom: var(--small-offset);

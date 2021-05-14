@@ -66,7 +66,8 @@
       .accordion.open .accordion__res {
         padding-bottom: 0; } }
   .accordion__close {
-    transition: .3s; }
+    transition: .3s;
+    margin-right: 10px; }
   .accordion.open .accordion__close {
     transform: rotate(45deg); }
 

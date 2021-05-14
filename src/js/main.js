@@ -102,5 +102,6 @@ const modalClose = document.querySelectorAll(".modal-close-btn")
 modalClose.forEach((el) => {
   el.addEventListener("click", () => {
     el.closest(".modal").classList.remove("active");
+    body.classList.remove("overflow-hidden");
   });
 });

@@ -7,6 +7,17 @@
         &__inner {
             padding: var(--second-offset);
             background-color: var(--color-seashell-peach);
+            @media (max-width: 930px) {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 40px 80px;
+            }
+            @media (max-width: 450px) {
+                padding: 20px 30px;
+            }
+            @media (max-width: 360px) {
+                padding: 20px;
+            }
         }
         &__cost,
         &__size,

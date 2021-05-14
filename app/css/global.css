@@ -310,7 +310,8 @@ input[type=number] {
   overflow: auto; }
 
 .product-size__list {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 .product-size__btn {
   padding: 9px 25.5px;

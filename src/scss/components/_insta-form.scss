@@ -21,6 +21,10 @@
         padding: var(--main-offset) var(--second-offset);
         background-color: var(--color-purple);
         border-radius: var(--border-radius);
+        @media (max-width: 1110px) {
+            max-width: 675px;
+            margin: 0 auto;
+        }
     }
     &__legend {
         color: var(--color-white);

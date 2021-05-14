@@ -79,6 +79,7 @@
     }
     &__close {
         transition: .3s;
+        margin-right: 10px;
     }
     &.open &__close {
         transform: rotate(45deg);

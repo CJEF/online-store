@@ -45,6 +45,9 @@
         justify-content: center;
         position: relative;
         z-index: 1;
+        @media (max-width: 360px) {
+            padding: 70px 15px 80px;
+        }
     }
     &__title {
         margin: 0 0 var(--second-offset);

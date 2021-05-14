@@ -3,9 +3,15 @@
     &__inner {
         grid-template-columns: repeat(12, 1fr);
         padding: var(--big-offset) 15px;
+        @media (max-width: 768px) {
+            padding: var(--second-offset) 15px;
+        }
     }
     &__title {
         margin-bottom: var(--big-offset);
+        @media (max-width: 768px) {
+            margin-bottom: var(--second-offset);
+        }
     }
     &__left {
         grid-column: 5 span;
@@ -18,13 +24,21 @@
         max-height: 500px;
         @media (max-width: 768px) {
             grid-column: 12 span;
+            max-height: 350px;
         }
     }
     &-left__socials {
         margin-top: var(--main-offset);
+        @media (max-width: 768px) {
+            margin-top: var(--second-offset);
+            margin-bottom: var(--small-offset);
+        }
     }
     &__left-links + &__left-links {
         margin-top: var(--main-offset);
+        @media (max-width: 768px) {
+            margin-top: 30px;
+        }
     }
     &-left__socials {
         display: flex;
@@ -53,6 +67,9 @@
     }
     &-link__department {
         margin-bottom: var(--main-offset);
+        @media (max-width: 768px) {
+            margin-bottom: var(--second-offset);
+        }
     }
 }
 
@@ -62,9 +79,14 @@
         font: var(--font-book-14);
         text-transform: uppercase;
         display: inline-block;
+
+
         &-sale {
-            margin-bottom: var(--second-offset);
+            margin-bottom: var(--main-offset);
             display: block;
+            @media (max-width: 768px) {
+                margin-bottom: var(--second-offset);
+            }
         }
     }
     &__number {
@@ -74,6 +96,9 @@
     &__address {
         font: var(--font-book-18);
         margin-top: var(--small-offset);
+        @media (max-width: 768px) {
+            margin-top: 0;
+        }
     }
 }
 

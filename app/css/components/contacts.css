@@ -3,8 +3,14 @@
   .contacts__inner {
     grid-template-columns: repeat(12, 1fr);
     padding: var(--big-offset) 15px; }
+    @media (max-width: 768px) {
+      .contacts__inner {
+        padding: var(--second-offset) 15px; } }
   .contacts__title {
     margin-bottom: var(--big-offset); }
+    @media (max-width: 768px) {
+      .contacts__title {
+        margin-bottom: var(--second-offset); } }
   .contacts__left {
     grid-column: 5 span; }
     @media (max-width: 768px) {
@@ -15,11 +21,19 @@
     max-height: 500px; }
     @media (max-width: 768px) {
       .contacts__map {
-        grid-column: 12 span; } }
+        grid-column: 12 span;
+        max-height: 350px; } }
   .contacts-left__socials {
     margin-top: var(--main-offset); }
+    @media (max-width: 768px) {
+      .contacts-left__socials {
+        margin-top: var(--second-offset);
+        margin-bottom: var(--small-offset); } }
   .contacts__left-links + .contacts__left-links {
     margin-top: var(--main-offset); }
+    @media (max-width: 768px) {
+      .contacts__left-links + .contacts__left-links {
+        margin-top: 30px; } }
   .contacts-left__socials {
     display: flex; }
   .contacts-left__social {
@@ -42,6 +56,9 @@
     margin-left: var(--second-offset); }
   .contacts-link__department {
     margin-bottom: var(--main-offset); }
+    @media (max-width: 768px) {
+      .contacts-link__department {
+        margin-bottom: var(--second-offset); } }
 
 .contact-links__department {
   color: var(--color-gray);
@@ -49,8 +66,11 @@
   text-transform: uppercase;
   display: inline-block; }
   .contact-links__department-sale {
-    margin-bottom: var(--second-offset);
+    margin-bottom: var(--main-offset);
     display: block; }
+    @media (max-width: 768px) {
+      .contact-links__department-sale {
+        margin-bottom: var(--second-offset); } }
 
 .contact-links__number {
   color: var(--color-river-bed);
@@ -59,6 +79,9 @@
 .contact-links__address {
   font: var(--font-book-18);
   margin-top: var(--small-offset); }
+  @media (max-width: 768px) {
+    .contact-links__address {
+      margin-top: 0; } }
 
 .link-department {
   cursor: pointer;
