@@ -49,6 +49,8 @@
         & ~ .header__right {
             top: calc(100% - 82px);
             right: 0;
+            opacity: 1;
+            height: 100vh;
             @media (max-width: 360px) {
                 top: calc(100% - 62px);
             }

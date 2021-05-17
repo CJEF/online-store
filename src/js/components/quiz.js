@@ -75,7 +75,7 @@ const quizTemplate = (data = [], dataLength = 0, options) => {
   const { nextBtnText } = options;
   const answers = data.answers.map((item) => {
 
-    console.log(item);
+    // console.log(item);
 
     if (item.type === 'checkbox') {
       return `
@@ -161,7 +161,7 @@ class Quiz {
   }
 
   init() {
-    console.log("init!");
+    // console.log("init!");
     this.$el.innerHTML = quizTemplate(
       this.data[this.counter],
       this.dataLength,
@@ -201,7 +201,7 @@ class Quiz {
   }
 
   events() {
-    console.log("events!");
+    // console.log("events!");
     this.$el.addEventListener("click", (e) => {
       if (e.target == document.querySelector("[data-next-btn]")) {
         this.addToSend();

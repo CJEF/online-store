@@ -36,7 +36,9 @@
       transform: rotate3d(0, 0, 1, -45deg); }
   .burger.open ~ .header__right {
     top: calc(100% - 82px);
-    right: 0; }
+    right: 0;
+    opacity: 1;
+    height: 100vh; }
     @media (max-width: 360px) {
       .burger.open ~ .header__right {
         top: calc(100% - 62px); } }

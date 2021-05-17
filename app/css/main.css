@@ -740,7 +740,8 @@
     width: 1160px;
     position: relative;
     margin: auto;
-    background-color: var(--color-white); }
+    background-color: var(--color-white);
+    transition: .3s; }
     @media (max-width: 1139px) {
       .modal-product {
         max-width: 610px; } }
@@ -972,7 +973,9 @@
       transform: rotate3d(0, 0, 1, -45deg); }
   .burger.open ~ .header__right {
     top: calc(100% - 82px);
-    right: 0; }
+    right: 0;
+    opacity: 1;
+    height: 100vh; }
     @media (max-width: 360px) {
       .burger.open ~ .header__right {
         top: calc(100% - 62px); } }
@@ -1009,34 +1012,42 @@
     grid-column: 2 span; }
   .header__burger {
     grid-column: 1 span;
-    grid-column-start: 13; }
+    grid-column-start: 12; }
   .header__right {
     grid-column: 10 span;
     display: flex;
     align-items: baseline;
     justify-content: flex-end;
-    transition: .3s linear; }
+    transition: opacity .25s linear, right .25s linear, height .25s linear; }
     @media (max-width: 1110px) {
       .header__right {
         position: absolute;
         top: 0%;
         right: -100%;
         width: 100vw;
-        height: 100vh;
+        height: 0;
+        opacity: 0;
         background-color: var(--color-purple);
         z-index: 1000;
         align-items: center;
-        justify-content: center;
         display: flex;
-        flex-direction: column;
-        justify-content: center; } }
+        justify-content: center;
+        flex-direction: column; } }
   @media (max-width: 1110px) {
     .header__cart {
       margin-left: 0;
-      margin-top: var(--second-offset); } }
-  @media (max-width: 330px) {
+      margin-top: var(--second-offset); }
+    .header__nav {
+      padding-top: 150px; }
     .header__cart {
-      margin-top: 15px; } }
+      padding-bottom: 50px; }
+    .header__right {
+      overflow: auto; } }
+  @media (max-width: 450px) {
+    .header__cart {
+      margin-top: 15px; }
+    .header__nav {
+      padding-top: 50px; } }
 
 .hero {
   background-color: var(--color-purple);

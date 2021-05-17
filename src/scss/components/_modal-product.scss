@@ -8,6 +8,8 @@
         position: relative;
         margin: auto;
         background-color: var(--color-white);
+        transition: .3s;
+
 
         @media (max-width: 1139px) {
             max-width: 610px;

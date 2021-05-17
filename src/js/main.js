@@ -92,16 +92,31 @@ document.addEventListener("click", (e) => {
 /* ======================================== */
 
 burgerMenu.addEventListener("click", () => {
-  burgerMenu.classList.toggle("open");
+  if (burgerMenu.classList.contains("open")) {
+    body.classList.remove("overflow-hidden");
+    burgerMenu.classList.remove("open");
+  } else {
+    burgerMenu.classList.toggle("open");
+    body.classList.add("overflow-hidden");
+  }
 })
 
 // modal close btn
 
-const modalClose = document.querySelectorAll(".modal-close-btn")
+const modalClose = document.querySelectorAll(".modal-close-btn");
 
 modalClose.forEach((el) => {
   el.addEventListener("click", () => {
     el.closest(".modal").classList.remove("active");
+    body.classList.remove("overflow-hidden");
+  });
+});
+
+const modalCloseNavLink = document.querySelectorAll(".modal-close-js")
+
+modalCloseNavLink.forEach((el) => {
+  el.addEventListener("click", () => {
+    burgerMenu.classList.remove("open");
     body.classList.remove("overflow-hidden");
   });
 });

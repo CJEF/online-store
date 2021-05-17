@@ -132,8 +132,7 @@ var quizTemplate = function quizTemplate() {
       title = data.title;
   var nextBtnText = options.nextBtnText;
   var answers = data.answers.map(function (item) {
-    console.log(item);
-
+    // console.log(item);
     if (item.type === 'checkbox') {
       return "\n          <li class=\"quiz-question__item\">\n              <label class=\"custom-checkbox quiz-question__label quiz-label\">\n                  <img src=\"img/sneaker.jpg\" alt=\"product image\">\n                  <div class=\"quiz-label__bottom\">\n          <input type=\"".concat(item.type, "\" data-valid=\"false\" class=\"quiz-question__answer custom-checkbox__field\" name=\"").concat(data.answer_alias, "\" ").concat(item.type == "text" ? 'placeholder="Введите ваш вариант"' : "", " value=\"").concat(item.type !== "text" ? item.answer_title : "", "\">\n          <span class=\"custom-checkbox__text\">").concat(item.answer_title, "</span>\n                  </div>\n        </label>\n          </li>\n      ");
     } else if (item.type === "radio") {
@@ -165,7 +164,7 @@ var Quiz = /*#__PURE__*/function () {
   _createClass(Quiz, [{
     key: "init",
     value: function init() {
-      console.log("init!");
+      // console.log("init!");
       this.$el.innerHTML = quizTemplate(this.data[this.counter], this.dataLength, this.options);
     }
   }, {
@@ -198,7 +197,7 @@ var Quiz = /*#__PURE__*/function () {
     value: function events() {
       var _this = this;
 
-      console.log("events!");
+      // console.log("events!");
       this.$el.addEventListener("click", function (e) {
         if (e.target == document.querySelector("[data-next-btn]")) {
           _this.addToSend();
@@ -466,7 +465,13 @@ document.addEventListener("click", function (e) {
 /* ======================================== */
 
 burgerMenu.addEventListener("click", function () {
-  burgerMenu.classList.toggle("open");
+  if (burgerMenu.classList.contains("open")) {
+    body.classList.remove("overflow-hidden");
+    burgerMenu.classList.remove("open");
+  } else {
+    burgerMenu.classList.toggle("open");
+    body.classList.add("overflow-hidden");
+  }
 }); // modal close btn
 
 var modalClose = document.querySelectorAll(".modal-close-btn");
@@ -476,12 +481,11 @@ modalClose.forEach(function (el) {
     body.classList.remove("overflow-hidden");
   });
 });
-
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach((el) => {
-  el.addEventListener("click", () => {
+var modalCloseNavLink = document.querySelectorAll(".modal-close-js");
+modalCloseNavLink.forEach(function (el) {
+  el.addEventListener("click", function () {
     burgerMenu.classList.remove("open");
+    body.classList.remove("overflow-hidden");
   });
 });
 //# sourceMappingURL=main.js.map
