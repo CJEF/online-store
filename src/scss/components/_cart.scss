@@ -4,8 +4,15 @@
     align-items: center;
     position: relative;
 
+    @media (max-width: 1110px) {
+        flex-direction: column;
+    }
+
     &.active .cart-modal {
         display: block;
+        @media (max-width: 1110px) {
+            margin-bottom: 30px;
+        }
     }
 
     &.active .cart__text::before {
@@ -49,6 +56,11 @@
         display: flex;
         align-items: center;
         position: relative;
+
+        @media (max-width: 1110px) {
+            margin: 0 auto;
+        }
+
         svg {
             display: block;
             width: 20px;
@@ -86,6 +98,10 @@
         position: absolute;
         top: 50px;
         right: 0;
+
+        @media (max-width: 1110px) {
+            position: relative;
+        }
 
         &__list {
             max-height: 325px;

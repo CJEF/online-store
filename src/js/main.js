@@ -39,9 +39,8 @@ const burgerMenu = document.querySelector("#burger-menu");
 
 /* ======================================== */
 
-cartBtn.addEventListener("click", () => {
+cartBtn.addEventListener("click", function () {
   cart.classList.toggle("active");
-  // body.classList.toggle("overflow-hidden");
 });
 
 document.addEventListener("click", (e) => {

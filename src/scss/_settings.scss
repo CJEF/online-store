@@ -133,6 +133,8 @@ a {
   height: 80px;
   display: inline-flex;
   justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
   align-items: center;
   background-color: var(--color-river-bed);
   border-radius: 50%;

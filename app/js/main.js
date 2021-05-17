@@ -417,7 +417,7 @@ var burgerMenu = document.querySelector("#burger-menu");
 /* ======================================== */
 
 cartBtn.addEventListener("click", function () {
-  cart.classList.toggle("active"); // body.classList.toggle("overflow-hidden");
+  cart.classList.toggle("active");
 });
 document.addEventListener("click", function (e) {
   var target = e.target;

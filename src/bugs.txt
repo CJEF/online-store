@@ -11,3 +11,11 @@ footer container
 нет иконки бургера на телефоне
 закрытие бургер меню при клике на ссылку
 написать класс с методами для того чтобы не писать функции повторно
+
+margin-left: var(--small-offset);
+min-width: var(--second-offset);
+min-height: var(--second-offset);
+max-width: var(--second-offset);
+max-height: var(--second-offset);
+border-radius: 100%;
+background-color: var(--color-white);
